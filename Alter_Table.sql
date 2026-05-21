@@ -34,7 +34,11 @@ person_table RENAME TO person;
 ALTER TABLE person 
 ALTER COLUMN fname
 SET DATA TYPE VARCHAR(200);
-
+            ---its not allowed to set all at once like : SET DATA TYPE VARCHAR(200) NOT NULL DEFAULT 'default'
+            --- rather than do one by one 
+            --- SET DATA TYPE VARCHAR(200) 
+            --- SET NOT NULL 
+            --- SET DEFAULT 'default'
 ALTER TABLE person 
 ALTER COLUMN fname
 SET DEFAULT 'Unknown'; -- as same add NOT NULL
